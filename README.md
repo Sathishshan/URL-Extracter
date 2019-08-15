@@ -1,5 +1,7 @@
 ### URL-Extracter
 
+Crawl all URLs in Google search results
+
 ## Procedure:
 
 * Turn OFF JavaScript in Your browser, by going to inspect-element -> Settings -> Disable "Java Script"
