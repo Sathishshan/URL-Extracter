@@ -14,6 +14,7 @@ save=$2
 grep -Po '(?:(?<=href="\/url\?q\=)https?:\/\/[\w.-\/%?&:@=\\+#]+)' ${no_js} | sed 's+&amp++g' >> ${save}
 #sed &amp - For query string ignorance
 sed -i -r '/^https?:\/\/www\.google\.com/d' ${save}
-#sed google.com - Is for incase of google preference url
+sed -i -r '/^https?:\/\/accounts\.google\.com/d' ${save}
+#sed google.com & account.google.com - Is for incase of google preference urls
 
 echo "log generated!"
