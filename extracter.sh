@@ -11,7 +11,7 @@ fi
 
 no_js=$1
 save=$2
-grep -Po '(?:(?<=href="\/url\?q\=)https?:\/\/[^;]*)' ${no_js} | sed 's+&amp++g' >> ${save}
+grep -Po '(?:(?<=href="\/url\?q\=)https?:\/\/[^;]+)' ${no_js} | sed 's+&amp$++g' >> ${save}
 #sed &amp - For query string ignorance
 sed -i -r '/^https?:\/\/www\.google\.com/d' ${save}
 sed -i -r '/^https?:\/\/accounts\.google\.com/d' ${save}
